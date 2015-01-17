@@ -1,0 +1,42 @@
+# Copyright 2014 Sergey Kvachonok <ravenexp@gmail.com>
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="a tiling window manager modelled after GNU Screen"
+DESCRIPTION="Ratpoison is a simple Window Manager with no fat library
+ dependencies, no fancy graphics, no window decorations,
+ and no rodent dependence."
+
+HOMEPAGE="http://www.nongnu.org/${PN}/"
+DOWNLOADS="mirror://savannah/${PN}/${PNV}.tar.gz"
+BUGS_TO="ravenexp@gmail.com"
+
+SLOT="0"
+PLATFORMS="~amd64 ~x86"
+
+MYOPTIONS="
+    emacs [[ description = [ Provides functions to access ratpoison from within Emacs ] ]]
+"
+
+LICENCES="GPL-2"
+
+DEPENDENCIES="
+    build:
+        x11-proto/xextproto
+        x11-proto/xineramaproto
+        x11-proto/xproto
+    build+run:
+        sys-libs/readline
+        x11-libs/libICE
+        x11-libs/libX11
+        x11-libs/libXext
+        x11-libs/libXft
+        x11-libs/libXinerama
+        x11-libs/libXtst
+"
+
+src_install() {
+    default
+
+    option emacs || edo rm -r "${IMAGE}/usr/share/emacs"
+}
+
