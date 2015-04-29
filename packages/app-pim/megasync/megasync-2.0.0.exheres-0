@@ -7,9 +7,8 @@ SUMMARY="Easy automated syncing between your computers and your MEGA cloud drive
 
 HOMEPAGE="https://mega.co.nz/#sync"
 DOWNLOADS="
-    listed-only:
-        platform:amd64? ( https://mega.co.nz/linux/MEGAsync/Debian_7.0/amd64/${PN}_${PV}_amd64.deb )
-        platform:x86? ( https://mega.co.nz/linux/MEGAsync/Debian_7.0/i386/${PN}_${PV}_i386.deb )
+    https://mega.co.nz/linux/MEGAsync/Debian_7.0/amd64/${PN}_${PV}_amd64.deb
+    https://mega.co.nz/linux/MEGAsync/Debian_7.0/i386/${PN}_${PV}_i386.deb
 "
 
 LICENCES="MEGA-ToS"
@@ -32,11 +31,17 @@ DEPENDENCIES="
 WORK="${WORKBASE}"
 
 src_unpack() {
-    default
+    if [[ $(exhost --target) == x86_64-pc-linux-gnu ]] ; then
+        unpack ${PN}_${PV}_amd64.deb
+    elif [[ $(exhost --target) == i686-pc-linux-gnu ]] ; then
+        unpack ${PN}_${PV}_i386.deb
+    fi
     edo tar xf data.tar.gz ./
 }
 
 src_install() {
+    edo mkdir usr/$(exhost --target)
+    edo mv usr/bin usr/$(exhost --target)/
     edo mv usr/ "${IMAGE}"
 }
 
