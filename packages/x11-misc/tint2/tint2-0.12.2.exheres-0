@@ -3,6 +3,5 @@
 
 require tint2
 
-DOWNLOADS="${HOMEPAGE}/files/${PNV}.tar.bz2"
 PLATFORMS="~amd64 ~x86"
 
