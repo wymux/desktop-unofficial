@@ -21,7 +21,6 @@ DOWNLOADS="listed-only: (
 )"
 
 BUGS_TO="oahong@gmail.com"
-REMOTE_IDS="freshmeat:${PN}"
 UPSTREAM_RELEASE_NOTES="${HOMEPAGE}/news/#${PV}"
 UPSTREAM_DOCUMENTATION="${HOMEPAGE}/documentation/faq"
 
