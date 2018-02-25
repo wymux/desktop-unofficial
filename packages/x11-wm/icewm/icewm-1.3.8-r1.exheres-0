@@ -19,9 +19,7 @@ DEPENDENCIES="
     build:
         dev-util/pkg-config
         sys-devel/gettext
-        x11-proto/xextproto
-        x11-proto/xineramaproto
-        x11-proto/xproto
+        x11-proto/xorgproto
     build+run:
         media-libs/freetype:2
         x11-libs/gtk+:=2
