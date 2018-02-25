@@ -23,8 +23,7 @@ DEPENDENCIES="
         dev-util/intltool
         dev-util/pkg-config
         sys-devel/gettext
-        x11-proto/xineramaproto
-        x11-proto/xproto
+        x11-proto/xorgproto
     build+run:
         dev-libs/dbus-glib
         dev-libs/glib:2
