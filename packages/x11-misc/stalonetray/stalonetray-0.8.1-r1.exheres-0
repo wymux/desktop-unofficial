@@ -16,7 +16,7 @@ MYOPTIONS="debug"
 
 DEPENDENCIES="
     build:
-        x11-proto/xproto
+        x11-proto/xorgproto
     build+run:
         x11-libs/libX11
         x11-libs/libXpm
