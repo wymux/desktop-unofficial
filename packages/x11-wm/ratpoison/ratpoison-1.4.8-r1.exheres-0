@@ -21,9 +21,7 @@ LICENCES="GPL-2"
 
 DEPENDENCIES="
     build:
-        x11-proto/xextproto
-        x11-proto/xineramaproto
-        x11-proto/xproto
+        x11-proto/xorgproto
     build+run:
         sys-libs/readline
         x11-libs/libICE
