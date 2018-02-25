@@ -33,10 +33,7 @@ DEPENDENCIES="
     build:
         dev-util/pkg-config
         sys-devel/gettext
-        x11-proto/renderproto
-        x11-proto/xextproto
-        x11-proto/xineramaproto
-        x11-proto/xproto
+        x11-proto/xorgproto
         doc?      ( dev-libs/libxslt )
         readline? (
             sys-libs/ncurses
