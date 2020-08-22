@@ -22,4 +22,3 @@ DEPENDENCIES="
         x11-libs/gtk+:2[>=2.6.0]
 "
 
-BUGS_TO="oahong@gmail.com"

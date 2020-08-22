@@ -8,8 +8,6 @@ DESCRIPTION="Ratpoison is a simple Window Manager with no fat library
 
 HOMEPAGE="http://www.nongnu.org/${PN}/"
 DOWNLOADS="mirror://savannah/${PN}/${PNV}.tar.gz"
-BUGS_TO="ravenexp@gmail.com"
-
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
 

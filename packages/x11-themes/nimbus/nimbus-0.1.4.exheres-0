@@ -30,8 +30,6 @@ DEPENDENCIES="
         x11-libs/gtk+:2
 "
 
-BUGS_TO="oahong@gmail.com"
-
 src_prepare() {
     echo "dark-index.theme.in light-index.theme.in" >> po/POTFILES.in
 }

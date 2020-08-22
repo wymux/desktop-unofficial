@@ -42,7 +42,6 @@ DEPENDENCIES="
         x11-plugins/cairo-dock-plugins
 "
 
-BUGS_TO="oahong@gmail.com"
 WORK="${WORKBASE}/${MY_PNV}"
 
 DEFAULT_SRC_CONFIGURE_PARAMS=( --enable-xextend --disable-glitz )

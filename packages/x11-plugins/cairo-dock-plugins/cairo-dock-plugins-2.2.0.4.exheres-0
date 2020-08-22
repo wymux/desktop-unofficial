@@ -17,7 +17,6 @@ DEPENDENCIES="
         x11-apps/cairo-dock[=${PV}]
 "
 
-BUGS_TO="jan@codejunky.org"
 WORK="${WORKBASE}/${MY_PNV}"
 
 src_prepare() {

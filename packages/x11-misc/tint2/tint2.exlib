@@ -37,7 +37,6 @@ DEPENDENCIES="
         )
 "
 
-BUGS_TO="oahong@gmail.com"
 UPSTREAM_CHANGELOG="https://gitlab.com/o9000/tint2/blob/0.12.2/ChangeLog"
 UPSTREAM_DOCUMENTATION="https://gitlab.com/o9000/tint2/wikis/home"
 

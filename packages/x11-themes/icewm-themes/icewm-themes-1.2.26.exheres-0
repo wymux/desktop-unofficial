@@ -15,7 +15,6 @@ MYOPTIONS=""
 
 DEPENDENCIES=""
 
-BUGS_TO="oahong@gmail.com"
 DEFAULT_SRC_INSTALL_PARAMS=( LIBDIR="${IMAGE}"/usr/share/icewm/themes )
 
 src_prepare() {

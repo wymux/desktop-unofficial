@@ -16,8 +16,6 @@ DEPENDENCIES="
        x11-apps/xcursorgen
 "
 
-BUGS_TO="oahong@gmail.com"
-
 src_compile() {
     for d in DMZ-{Black,White} ; do
         cd "${WORK}"/${d}/pngs
