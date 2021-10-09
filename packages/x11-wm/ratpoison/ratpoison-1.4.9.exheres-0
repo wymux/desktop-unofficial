@@ -12,23 +12,38 @@ SLOT="0"
 PLATFORMS="~amd64 ~x86"
 
 MYOPTIONS="
+    debug [[ description = [ Build with extra debugging messages ] ]]
     emacs [[ description = [ Provides functions to access ratpoison from within Emacs ] ]]
+    randr [[ description = [ Allows x11-apps/xrandr commands such as adjusting screen resolution ] ]]
 "
 
 LICENCES="GPL-2"
 
 DEPENDENCIES="
-    build:
-        x11-proto/xorgproto
     build+run:
-        sys-libs/readline
-        x11-libs/libICE
+        sys-libs/readline:=
         x11-libs/libX11
-        x11-libs/libXext
         x11-libs/libXft
-        x11-libs/libXinerama
         x11-libs/libXtst
+        x11-libs/libxcb
+        randr? ( x11-apps/xrandr )
 "
+
+DEFAULT_SRC_CONFIGURE_PARAMS=(
+    --with-history
+    --with-x
+    --with-xft
+    --with-xkb
+    --without-electric-fence
+)
+
+DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=(
+    debug
+)
+
+DEFAULT_SRC_CONFIGURE_OPTION_WITHS=(
+   "randr xrandr"
+)
 
 src_install() {
     default
